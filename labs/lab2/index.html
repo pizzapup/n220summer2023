@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab2</title>
+  </head>
+  <body>
+    <h1>Lab 2 | Animation and Conditional Operators</h1>
+    <article>
+      <h2>Counter</h2>
+      <p>Outputs a number to the console every draw call of P5</p>
+      <p>
+        <em style="color: red">click anywhere to start/stop the counter.</em>
+      </p>
+      <div id="counterApp"></div>
+    </article>
+    <article>
+      <h2>Puck Side App</h2>
+      <p>
+        Draws a circle where the mouse is. Circle is blue when mouse is on left
+        side of canvas and red on the right side. Canvas is 400x300.
+      </p>
+      <div id="puckSideApp"></div>
+    </article>
+    <article>
+      <h2>World Wrap App</h2>
+      <p>
+        Starts drawing ball on the left hand of the screen - make it move to the
+        right 5px per frame. When the circle reaches 800pc to the right, the
+        circle moves to the far left of the screen.
+      </p>
+      <div id="worldWrapApp"></div>
+    </article>
+    <article>
+      <h2>Ball Bounce</h2>
+      <p>
+        Create a sketch with a circle moving left and down at 5px per update.
+        This speed should be stored as separate speed variables in your code
+        (this is required to solve this problem). <br />Assume a 'world bounds'
+        for this object to be 800x600 <br />When the ball reaches the edge of
+        the bounds, bounce it by multiplying the associated velocity variable by
+        *= -1, to make the ball be moving in the opposite direction. If you have
+        found a hit on the right or left bounds, it should be the x velocity
+        variable you are modifying. If its on the top or bottom bounds, you
+        should be modifying the y velocity variable.
+      </p>
+      <div id="ballBounceApp"></div>
+    </article>
+    <article>
+      <h2>Ever larger, until not</h2>
+      <p>
+        Create an application that draws a circle to the center of the screen
+        every update frame, starting with a diameter of 1. Using a global
+        variable, change increase the diameter of the circle by 1 every frame.
+        Once the circle gets a diameter of 200, set its diameter back to 1.
+      </p>
+      <div id="everLargerApp"></div>
+    </article>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
