@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab6 | Objects</title>
+    <style>
+      .dog {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+      }
+      .different-bg {
+        background-color: rgb(236, 255, 254);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: right">
+      <a href="../index.html">BACK TO LAB 6</a>
+    </div>
+
+    <h1>Lab 6 | Objects</h1>
+    <h2>List Display</h2>
+    <p>
+      Create an HTML5 application with a collection (array of objects) in
+      JavaScript that with entries for something you have a collection of
+      (movies, books, rocks, bugs.. what have you). Each object must have at
+      least 3 properties. Use a loop in JavaScript to loop through those
+      elements, and create a div for each that display the data, place that
+      element on the page.
+    </p>
+    <p>
+      Include in this loop at least one IF statement that changes an element's
+      style based on some property. For instance, perhaps if a bug's length
+      property is greater than 5cm, you set the background color of that element
+      to yellow. Your data must be set up in a way to force this change to
+      happen for at least one of your elements.
+    </p>
+    <hr />
+    <div>
+      <h3>Dog List</h3>
+      <p>
+        Background color of the list item will be
+        <span class="different-bg">rgb(236, 255, 254)</span> if the dog's size
+        is large.
+      </p>
+      <div id="collection"></div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

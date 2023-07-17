@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 | Battle System</title>
+  </head>
+  <body>
+    <style>
+      #battleContainer {
+        display: flex;
+      }
+      .statsContainer {
+        flex: 1;
+        min-width: 0; /* Ensure content doesn't cause overflow */
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    </style>
+    <div style="text-align: right">
+      <a href="../index.html">BACK TO LAB 6</a>
+    </div>
+    <h1>Lab 6 | Objects</h1>
+    <h2>Battle System</h2>
+    <div>
+      <p>
+        Create a simple, JRPG battle system using two objects: one for an
+        'enemy' and the other for a 'player'. Each object should have properties
+        for: attack, hp, and defense. Display both sets of stats on the
+        document. Using a button, provide the ability for the player to "attack"
+        the enemy, using this calculation: enemyHP -= playerAttack -
+        enemyDefense. Have the enemy do the same to the player. Update the
+        displayed HP on the page after the calculation.
+      </p>
+      <hr />
+      <p>
+        <em
+          ><strong>Damage:</strong> Attack Roll + Attack Bonus - Target
+          Defense</em
+        >
+      </p>
+    </div>
+    <hr />
+    <div id="battleContainer">
+      <!-- PLAYER -->
+      <div id="playerStats" class="statsContainer">
+        <h3>Player</h3>
+        <ul>
+          <li>HP: <span id="playerHP"></span></li>
+          <li>Attack: <span id="playerAttack"></span></li>
+          <li>Defense: <span id="playerDefense"></span></li>
+        </ul>
+        <button id="playerAction">Roll for Attack</button>
+      </div>
+
+      <!-- ENEMY -->
+      <div id="enemyStats" class="statsContainer">
+        <h3>Enemy</h3>
+        <ul>
+          <li>HP: <span id="enemyHP"></span></li>
+          <li>Attack: <span id="enemyAttack"></span></li>
+          <li>Defense: <span id="enemyDefense"></span></li>
+        </ul>
+        <button id="enemyAction">Roll for Attack</button>
+      </div>
+    </div>
+    <ul id="attackLog"></ul>
+
+    <script src="app.js"></script>
+  </body>
+</html>
