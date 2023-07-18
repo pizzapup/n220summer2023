@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 7 | User Input & Interaction</title>
+  </head>
+  <body>
+    <div style="text-align: right">
+      <a href="../index.html">BACK TO LAB 7</a>
+    </div>
+    <p>Lab 7: User Input & Interaction</p>
+    <h1>Tip Calculator</h1>
+    <div>
+      <p>
+        Make a page with one input and one button (Seeing a trend?). When the
+        button is clicked (assuming the value typed into the input is
+        numerical), calculate both the tip and the full value of the bill to be
+        paid.
+      </p>
+      <p>
+        Output both to the console, formatted as such: <br />"Tip: $X. Total:
+        $X"
+      </p>
+    </div>
+    <hr />
+    <!-- Label for the bill input field -->
+    <label for="billInput">Bill Amount:</label>
+    <br />
+
+    <!-- Input field for entering the bill amount -->
+    <input type="text" id="billInput" placeholder="Enter bill amount" />
+    <br />
+
+    <!-- Button to calculate the tip and total bill -->
+    <button id="calculateButton">Calculate</button>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
