@@ -43,8 +43,8 @@ for (let i = 0; i < dogs.length; i++) {
 
   // Add a different background color to the div element based on the dog's size
   if (dog.size === "large") {
-    // Add the large class to the div element - this will allow us to style the div element later (see styles.css) - see https://developer.mozilla.org/en-US/docs/Web/API/Element/classList for more info on the classList property and its methods (add, remove, toggle, etc.)
-    dogDiv.classList.add("different-bg");
+    // Change the background color of the div element to #ecfffe if the dog's size is large (see https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
+    dogDiv.style.backgroundColor = "#ecfffe";
   }
 
   // Append the div element to the collection element on the page (see https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
