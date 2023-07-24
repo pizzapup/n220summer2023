@@ -1,23 +1,19 @@
-// Greeter app.js
+// Greeter app
+//  Generates a greeting message based on the provided name input and logs it to the console.
 
 class Greeting {
-  // Class for handling greetings
-
-  // Method to handle button click event
+  // A static method can be called without instantiating the class first
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
   static sayHello() {
-    // Get the value entered in the input field with id "nameInput"
-    const name = document.getElementById("nameInput").value;
+    const name = document.getElementById("nameInput").value; // Get the value of the "nameInput" element
 
-    // Create a greeting message with the entered name
-    const greetingMessage = `Hello ${name}`;
+    const greetingMessage = `Hello ${name}`; // Generate the greeting
 
-    // Log the greeting message to the developer console
-    console.log(greetingMessage);
+    console.log(greetingMessage); // Log the greeting
   }
 }
 
-// Add event listener to the button with id "submitButton"
-// When the button is clicked, call the Greeting.sayHello method
+// Add event listener to the submit button
 document
   .getElementById("submitButton")
   .addEventListener("click", Greeting.sayHello);

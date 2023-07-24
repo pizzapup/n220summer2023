@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab5 | DOM Exercises</title>
+    <title>Over and Out</title>
     <style>
       .square {
         width: 100px;
@@ -13,23 +13,23 @@
     </style>
   </head>
   <body>
-    <div style="text-align: right">
-      <a href="../index.html">BACK TO LAB 5</a>
-    </div>
+    <a href="../index.html" class="backNav">back to lab</a>
+    <p>Lab 5 | DOM Exercises</p>
+    <h1>Over and Out</h1>
+    <div>
+      <p>
+        Write the markup and JavaScript to place a square div on the page (100px
+        x 100px), with a blue background. Using onmouseover and onmouseout
+        (instead of "onclick"), change the div's color to black when the mouse
+        is over the div, and back to blue when the mouse leaves.
+      </p>
 
-    <h1>Lab 5 | DOM Exercises</h1>
-    <h2>Over and Out</h2>
-    <p>
-      Write the markup and JavaScript to place a square div on the page (100px x
-      100px), with a blue background. Using onmouseover and onmouseout (instead
-      of "onclick"), change the div's color to black when the mouse is over the
-      div, and back to blue when the mouse leaves.
-    </p>
-    <div
-      class="square"
-      onmouseover="changeColor('black')"
-      onmouseout="changeColor('blue')"
-    ></div>
+      <div
+        class="square"
+        onmouseover="changeColor('black')"
+        onmouseout="changeColor('blue')"
+      ></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
     <script src="./app.js"></script>

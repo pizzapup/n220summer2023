@@ -1,36 +1,30 @@
+// Bill Caclulator
+// Calculate the bill amount and total bill amount based on the bill amount entered by the user and log it to the console.
+
 class BillCalculator {
-  // Class for calculating tip and total bill
-
-  // Method to handle button click event
+  // We use a static method because we don't need to instantiate the class to use it (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)
   static calculateBill() {
-    // Retrieve the value entered in the input field with id "billInput"
-    const billAmount = parseFloat(document.getElementById("billInput").value);
+    const billAmount = parseFloat(document.getElementById("billInput").value); // Get the value of the "billInput" element and convert it to a number type
 
-    // Check if the entered value is numerical
+    // If the input is a number type, calculate the tip and total bill amount (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN)
     if (!isNaN(billAmount)) {
-      // Calculate tip amount (assuming 20% tip rate, anything else would be rude)
-      const tipAmount = billAmount * 0.2;
+      const tipAmount = billAmount * 0.2; // Calculate tip (20% of bill)
 
-      // Calculate total bill amount including tip
-      const totalBillAmount = billAmount + tipAmount;
+      const totalBillAmount = billAmount + tipAmount; // Calculate the total bill amount (bill amount + tip amount)
 
-      // Format the tip and total bill amounts for console output
-      const formattedTipAmount = `$${tipAmount.toFixed(2)}`;
-      const formattedTotalBillAmount = `$${totalBillAmount.toFixed(2)}`;
-
-      // Log the tip and total bill amounts to the developer console
+      // Log the tip amount and total bill amount to the console
+      // Format to 2 decimal places and add a dollar sign (https://www.w3schools.com/jsref/jsref_tofixed.asp)
       console.log(
-        `Tip: ${formattedTipAmount}. Total: ${formattedTotalBillAmount}`
+        `Tip: $${tipAmount.toFixed(2)}. Total: $${totalBillAmount.toFixed(2)}`
       );
     } else {
-      // If the entered value is not numerical, display an error message
+      // If the input is not a number type, log an error message to the console
       console.log("Invalid input. Please enter a numerical value.");
     }
   }
 }
 
-// Add event listener to the button with id "calculateButton"
-// When the button is clicked, call the BillCalculator.calculateBill method
+// Add event listener to the calculate button (https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 document
   .getElementById("calculateButton")
   .addEventListener("click", BillCalculator.calculateBill);

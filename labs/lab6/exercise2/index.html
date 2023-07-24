@@ -3,34 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab6 | Objects</title>
+    <title>Lab 6 | Objects</title>
   </head>
   <body>
-    <div style="text-align: right">
-      <a href="../index.html">BACK TO LAB 6</a>
+    <a href="../index.html" class="backNav">back to lab</a>
+    <p>Lab 6 | Objects</p>
+    <h1>Virtual Pet</h1>
+    <div>
+      <p>
+        Create an application with an object that represent a virtual pet -
+        similar to a Tamagotchi. Give this pet properties for name, energy,
+        happiness, and age. Include two buttons (and functions) for feeding and
+        playing with the pet - increasing the pet's energy by 5 when fed, and
+        increasing its happiness by 5 when played with. Display these stats on
+        the document: Name, happiness, and energy. They must update every time
+        you change the properties.
+      </p>
+      <p>
+        Consider using a function to update the document so you are not
+        repeating yourself across two functions.
+      </p>
     </div>
-
-    <h1>Lab 6 | Objects</h1>
-    <h2>Virtual Pet</h2>
-    <p>
-      Create an application with an object that represent a virtual pet -
-      similar to a Tamagotchi. Give this pet properties for name, energy,
-      happiness, and age. Include two buttons (and functions) for feeding and
-      playing with the pet - increasing the pet's energy by 5 when fed, and
-      increasing its happiness by 5 when played with. Display these stats on the
-      document: Name, happiness, and energy. They must update every time you
-      change the properties.
-    </p>
-    <p>
-      Consider using a function to update the document so you are not repeating
-      yourself across two functions.
-    </p>
     <hr />
-    <p>Name: <span id="name"></span></p>
-    <p>Happiness: <span id="happiness"></span></p>
-    <p>Energy: <span id="energy"></span></p>
+    <ul>
+<div>
+        <li>Name: <span id="name"></span></li>
+      <li>Happiness: <span id="happiness"></span></li>
+      <li>Energy: <span id="energy"></span></li>
+    </ul>
     <button id="feedButton">Feed</button>
     <button id="playButton">Play</button>
+</div>
 
     <script src="./app.js"></script>
   </body>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab5 | DOM Exercises</title>
+    <title>Peak Pixels</title>
     <style>
       .square {
         width: 100px;
@@ -13,23 +13,22 @@
     </style>
   </head>
   <body>
-    <div style="text-align: right">
-      <a href="../index.html">BACK TO LAB 5</a>
+    <a href="../index.html" class="backNav">back to lab</a>
+    <p>Lab 5 | DOM Exercises</p>
+    <h1>Peak Pixels</h1>
+    <div>
+      <p>
+        Write the markup and JS to place a square div on the page. 100px by
+        100px, green background. Make it so that when the div its clicked, it
+        increases its size by 10% every time.
+      </p>
+      <br />Hints:
+      <ul>
+        <li>Make a variable to store the height and with of the object</li>
+        <li>to set the height and width, set to varName + "px"</li>
+        <li>10% is .1 bigger,or 1.1 * the original size</li>
+      </ul>
     </div>
-
-    <h1>Lab 5 | DOM Exercises</h1>
-    <h2>Peak Pixels</h2>
-    <p>
-      Write the markup and JS to place a square div on the page. 100px by 100px,
-      green background. Make it so that when the div its clicked, it increases
-      its size by 10% every time.
-    </p>
-    <br />Hints:
-    <ul>
-      <li>Make a variable to store the height and with of the object</li>
-      <li>to set the height and width, set to varName + "px"</li>
-      <li>10% is .1 bigger,or 1.1 * the original size</li>
-    </ul>
 
     <div class="square" onclick="increaseSize()"></div>
 

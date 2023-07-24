@@ -3,39 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab2</title>
+    <title>Lab 2</title>
   </head>
   <body>
-    <div style="text-align: right">
-      <a href="../../index.html">BACK TO MAIN PAGE</a>
-    </div>
-    <h1>Lab 2 | Animation and Conditional Operators</h1>
-    <article>
+    <a href="../../index.html" class="backNav">back to main</a>
+    <p>Lab 2 | Animation and Conditional Operators</p>
+    <h1>Lab 2 Exercises:</h1>
+    <div>
       <h2>Counter</h2>
       <p>Outputs a number to the console every draw call of P5</p>
       <p>
         <em style="color: red">click anywhere to start/stop the counter.</em>
       </p>
+      <!-- Target container for p5 app "counterApp" -->
       <div id="counterApp"></div>
-    </article>
-    <article>
+    </div>
+    <div>
       <h2>Puck Side</h2>
       <p>
         Draws a circle where the mouse is. Circle is blue when mouse is on left
         side of canvas and red on the right side. Canvas is 400x300.
       </p>
+      <!-- Target container for p5 app "puckSideApp" -->
       <div id="puckSideApp"></div>
-    </article>
-    <article>
+    </div>
+    <div>
       <h2>World Wrap</h2>
       <p>
         Starts drawing ball on the left hand of the screen - make it move to the
         right 5px per frame. When the circle reaches 800pc to the right, the
         circle moves to the far left of the screen.
       </p>
+      <!-- Target container for p5 app "worldWrapApp" -->
       <div id="worldWrapApp"></div>
-    </article>
-    <article>
+    </div>
+    <div>
       <h2>Ball Bounce</h2>
       <p>
         Create a sketch with a circle moving left and down at 5px per update.
@@ -48,9 +50,10 @@
         variable you are modifying. If its on the top or bottom bounds, you
         should be modifying the y velocity variable.
       </p>
+      <!-- Target container for p5 app "ballBounceApp" -->
       <div id="ballBounceApp"></div>
-    </article>
-    <article>
+    </div>
+    <div>
       <h2>Ever larger, until not</h2>
       <p>
         Create an application that draws a circle to the center of the screen
@@ -58,9 +61,12 @@
         variable, change increase the diameter of the circle by 1 every frame.
         Once the circle gets a diameter of 200, set its diameter back to 1.
       </p>
+      <!-- Target container for p5 app "everLargerApp" -->
       <div id="everLargerApp"></div>
-    </article>
+    </div>
+    <!-- Import the p5.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+    <!-- Import the app.js file containing the p5.js code -->
     <script src="./js/app.js"></script>
   </body>
 </html>
