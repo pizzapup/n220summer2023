@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Its just average</title>
+  </head>
+  <body>
+    <div style="text-align: right">
+      <a href="../index.html">back to lab</a>
+    </div>
+    <p>Lab 9 | Array Computation</p>
+    <h1>Its just average</h1>
+    <div>
+      Create an application that:
+      <ol>
+        <li>Takes in a list of comma-separated numbers from the user</li>
+        <li>Splits that list into an array of numbers</li>
+        <li>Converts the string version of the numbers into number versions</li>
+        <li>Loops through the array and sums up the values</li>
+        <li>Calculates the average of the array</li>
+        <li>
+          Displays to the user
+          <ol>
+            <li>The average</li>
+            <li>The sum</li>
+          </ol>
+        </li>
+        <li>Removes the text from the input</li>
+      </ol>
+    </div>
+    <div>
+      <label for="numbers-input">Input numbers separated by commas:</label>
+      <input id="numbers-input" type="text" />
+      <ul>
+        <li>Numbers: <span id="list">0</span></li>
+        <li>Sum: <span id="sum">0</span></li>
+        <li>Average: <span id="avg">0</span></li>
+      </ul>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
