@@ -1,60 +1,55 @@
-// Its just average app.js
+// Color Changer app.js
 
-// Get the DOM elements that will display the sum, average, and list of numbers
-let inputElement = document.getElementById("numbers-input");
-let numbersList = document.getElementById("numbers");
-let notNumbersList = document.getElementById("not-numbers");
-let sumElement = document.getElementById("sum");
-let avgElement = document.getElementById("avg");
+// Initialize the colors
+let colors = ["rgb(102, 0, 1)", "rgb(1, 47, 31)", "rgb(0, 0, 170)"];
+let baseColor = "rgb(153, 153, 153)";
 
-function calculateAverage(event) {
-  // Initialize variables
-  let sum = 0;
-  let avg = 0;
-  let numbersArray = [];
-  numbersList.innerHTML = "";
-  notNumbersList.innerHTML = "";
-  console.log("hi");
-  // Split the input string into an array of strings
-  //Uses regex to split on commas, spaces, & commas + spaces (https://www.freecodecamp.org/news/javascript-split-how-to-split-a-string-into-an-array-in-js/)
-  let inputArray = inputElement.value
-    .split(/[, |,| |, ]/)
-    .filter((n) => n !== "");
+// Get references to the DOM elements
+let container = document.getElementById("app");
 
-  // Loop through the array of strings and convert each string to a number
-  for (let i = 0; i < inputArray.length; i++) {
-    let currentNumber = Number(inputArray[i]);
+// Loop through the array and create divs
+function createSquare(color) {
+  // Create div
+  const square = document.createElement("div");
 
-    // Check if the current number is a valid number
-    if (!isNaN(currentNumber)) {
-      // Add the current number to the array of numbers
-      numbersArray.push(currentNumber);
+  // Add the square class name (used for styling in the HTML)
+  square.classList.add("square");
 
-      // Create a list item for the current number and append it to the list element
-      const listItem = document.createElement("span");
-      listItem.textContent = `${currentNumber}, `;
-      numbersList.appendChild(listItem);
+  // Add custom data attributes
+  square.setAttribute("data-color", color);
+  square.setAttribute("data-base-color", baseColor);
 
-      // Add the current number to the sum
-      sum += currentNumber;
+  // Set the background color based on the color
+  square.style.backgroundColor = baseColor;
 
-      // Calculate the average
-      avg = sum / numbersArray.length;
-
-      // Update the DOM elements
-      sumElement.textContent = sum;
-      avgElement.textContent = avg;
-    } else {
-      // Append the current string to the notNumbersList element
-      notNumbersList.appendChild(document.createTextNode(inputArray[i]));
-    }
-  }
-
-  // Clear the input element
-  inputElement.value = "";
+  // Return the square
+  return square;
 }
 
-// Add event listener to the "Calculate" button to call the calculateAverage function
-document.getElementById("submit").addEventListener("click", function (e) {
-  calculateAverage(e);
+// Handle click event
+function handleClick(e) {
+  // Get the data attributes
+  let dataColor = e.target.getAttribute("data-color");
+  let baseColor = e.target.getAttribute("data-base-color");
+
+  // Check if the current background color is the same as the base color
+  if (e.target.style.backgroundColor === baseColor) {
+    // If true: change the color to the data color
+    e.target.style.backgroundColor = dataColor;
+  } else {
+    // If false: change the color to the base color
+    e.target.style.backgroundColor = baseColor;
+  }
+}
+
+// Loop through the array, create divs, add click event listeners, and append to the container
+colors.forEach((color) => {
+  // Create div
+  const square = createSquare(color);
+
+  // Add click event listener
+  square.addEventListener("click", handleClick);
+
+  // Append the div to the container
+  container.appendChild(square);
 });

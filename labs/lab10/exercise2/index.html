@@ -3,43 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bad word catcher with loops</title>
+    <title>Color Mixer</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div style="text-align: right">
       <a href="../index.html">back to lab</a>
     </div>
-    <p>Lab 9 | Array Computation</p>
+    <p>Lab 10 | Events</p>
 
-    <h1>Bad word catcher with loops</h1>
-    For the purpose of this exercise, bad words are:
-    <strong style="color: maroon">clear, water, tires</strong>
-    Create an application that:
-    <ul>
-      <li>Takes input from a user using a simple text input field.</li>
-      <li>Splits the string on spaces.</li>
-      <li>Loops through the array looking for bad words in the array</li>
-      <ul>
-        <li>Adds 1 to a tally count when a bad word is found</li>
-      </ul>
-      <li>Outputs to the document:</li>
-      <ul>
-        <li>If any bad words were found (found / not found).</li>
-        <li>How many bad words, in total, were found.</li>
-      </ul>
-      <li>Clears out the text field so the user can input a new string.</li>
-    </ul>
-    For example, if the user input "clear water is clear", there are 3 bad words
-    in the string.
-    <p>
-      This exercise combines prompt options 2 & 3 and uses both a loop and
-      <code>`array.includes`</code>
-    </p>
-    <label for="words-input">Input some words separated by spaces:</label>
-    <input id="words-input" type="text" />
-    <button id="submit">Submit</button>
-    <div id="output"></div>
-    <div id="number-output"></div>
+    <h1>Color Mixer</h1>
+    <div>
+      This is an application that will start a div at a black color, and as a
+      user presses buttons associated with RGB, the div will change to new
+      colors. The button presses should affect additively - that is. If a div is
+      currently blue, pressing +red buttons will change the div to a purple
+      color.
+      <br />
+      9 buttons (associated with red green and blue). There should be a +1, +5,
+      and +10 button for each color.
+      <br />
+
+      1 div that will change colors to the rgb color calculated
+      <br />
+
+      1 div that shows the current calculated rgb color
+      <br />
+
+      You must use attributes on the buttons for the values to change the colors
+      by.
+    </div>
+
+    <div id="app"></div>
     <script src="./app.js"></script>
   </body>
 </html>

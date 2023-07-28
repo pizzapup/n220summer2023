@@ -1,23 +1,43 @@
-// Make Divs app.js
-let objects = [
-  {color: "#FF0000", height: 100, width: 300},
-  {color: "#FFFF00", height: 200, width: 200},
-  {color: "#ff0000", height: 300, width: 100},
+// Flash Cards app.js
+
+// Get the container and output elements  from the DOM
+let container = document.getElementById("app");
+let output = document.getElementById("output");
+
+// Create an array of objects to hold the questions and answers
+let cards = [
+  {
+    q: "What is this dog on a scale of 1 to 10: 🐶",
+    a: "11/10 very good dog",
+  },
+  {q: "What are these dogs on a scale of 1 to 10: 🐕🐩", a: "11/10 dogs"},
+
+  {q: "All dogs are __ out of 10 ?", a: "at least 11"},
+
+  // {q: "Taco bell is the ________ of tacos.", a: "meatball"},
+  // This was a randomly generated and so incredibly wild that i dont have the heart to delete it
 ];
 
-// Get the container element to append the divs
-const container = document.getElementById("app");
+// Loop through the array of objects and create a button for each
+for (let i in cards) {
+  // Create a button
+  let card = document.createElement("button");
 
-// Loop through the array and create divs
-for (let i = 0; i < objects.length; i++) {
-  const div = document.createElement("div");
-  const {color, height, width} = objects[i];
+  // Set the text content of the button to the question
+  card.innerText = cards[i].q;
 
-  // Set the div's properties based on the array data
-  div.style.backgroundColor = color;
-  div.style.height = height + "px";
-  div.style.width = width + "px";
+  // Set the data attributes for the button to the answer
+  card.setAttribute("data-answer", cards[i].a);
 
-  // Append the div to the container
-  container.appendChild(div);
+  // Add an event listener to the button to display the answer when clicked
+  card.addEventListener("click", (e) => {
+    // Get the data attribute from the button that was clicked
+    let answer = e.target.dataset.answer;
+
+    // Set the output element's text to the answer
+    output.innerText = answer;
+  });
+
+  // Append the button to the container
+  container.appendChild(card);
 }

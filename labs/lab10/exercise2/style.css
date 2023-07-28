@@ -1,0 +1,28 @@
+.color-swatch {
+  margin: 10px 0px;
+  height: 200px;
+  width: 400px;
+}
+.color-text {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.button-group {
+  text-transform: capitalize;
+  margin: 5px 0px;
+  display: flex;
+  align-items: baseline;
+  padding: 10px;
+  border: 1px solid #cccccc;
+}
+.button-group-text {
+  flex: 0.5;
+}
+button {
+  text-transform: capitalize;
+  padding: 10px;
+  margin: 0px 5px;
+  flex: 1;
+}
