@@ -35,7 +35,7 @@ function draw() {
 
   // Draw the outer ears
   fill(colorDarkBrown);
-  s;
+
   smCircle(172, centerY - 75, 25, 30);
   smCircle(229, centerY - 74, 25, 30);
   // earsInner
